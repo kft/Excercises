@@ -13,6 +13,7 @@ public class SortingTests
         Assert.Equal([1, 2, 3], Sort([2, 1, 3]));
         Assert.Equal([1, 2, 3], Sort([3, 2, 1]));
         Assert.Equal([1, 2, 3, 4, 5], Sort([1, 3, 2, 5, 4]));
+        Assert.Equal([3, 5, 5, 6, 7, 10, 34], Sort([6, 3, 5, 5, 7, 10, 34]));
     }
 
     private IEnumerable<int> Sort(int[] listToSort)
