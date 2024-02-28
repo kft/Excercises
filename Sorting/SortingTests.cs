@@ -17,20 +17,18 @@ public class SortingTests
 
     private IEnumerable<int> Sort(int[] listToSort)
     {
-        if (listToSort.Length > 1)
+        if (listToSort.Length <= 1) return listToSort;
+        for (var limit = listToSort.Length - 1; limit > 0; limit--)
         {
-            for (var limit = listToSort.Length - 1; limit > 0; limit--)
+            for (var firstIndex = 0; firstIndex < limit; firstIndex++)
             {
-                for (var firstIndex = 0; firstIndex < limit; firstIndex++)
+                var secondIndex = firstIndex + 1;
+                if (listToSort[firstIndex] > listToSort[secondIndex])
                 {
-                    var secondIndex = firstIndex + 1;
-                    if (listToSort[firstIndex] > listToSort[secondIndex])
-                    {
-                        var firstValue = listToSort[firstIndex];
-                        var secondValue = listToSort[secondIndex];
-                        listToSort[firstIndex] = secondValue;
-                        listToSort[secondIndex] = firstValue;
-                    }
+                    var firstValue = listToSort[firstIndex];
+                    var secondValue = listToSort[secondIndex];
+                    listToSort[firstIndex] = secondValue;
+                    listToSort[secondIndex] = firstValue;
                 }
             }
         }
