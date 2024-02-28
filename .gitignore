@@ -16,3 +16,8 @@ obj/
 riderModule.iml
 /_ReSharper.Caches/
 *.idea*
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
