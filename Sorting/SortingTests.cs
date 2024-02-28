@@ -15,7 +15,7 @@ public class SortingTests
         Assert.Equal([3, 5, 5, 7, 10, 34, 34], Sort(34, 3, 5, 5, 7, 10, 34));
     }
 
-    private IEnumerable<int> Sort(params int[] listToSort)
+    private int[] Sort(params int[] listToSort)
     {
         if (listToSort.Length <= 1) return listToSort;
         for (var limit = listToSort.Length - 1; limit > 0; limit--)
