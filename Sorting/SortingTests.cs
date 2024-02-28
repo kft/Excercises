@@ -8,10 +8,10 @@ public class SortingTests
     public void Can_sort_an_array()
     {
         Assert.Equal(Array.Empty<int>(), Sort(Array.Empty<int>()));
-        Assert.Equal(new[] {1}, Sort([1]));
-        Assert.Equal(new[] {1, 2}, Sort([2, 1]));
-        Assert.Equal(new[] {1, 2, 3}, Sort([2, 1, 3]));
-        Assert.Equal(new[] {1, 2, 3}, Sort([3, 2, 1]));
+        Assert.Equal([1], Sort([1]));
+        Assert.Equal([1, 2], Sort([2, 1]));
+        Assert.Equal([1, 2, 3], Sort([2, 1, 3]));
+        Assert.Equal([1, 2, 3], Sort([3, 2, 1]));
         Assert.Equal([1, 2, 3, 4, 5], Sort([1, 3, 2, 5, 4]));
     }
 
